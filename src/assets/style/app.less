@@ -1,0 +1,137 @@
+@import (css) url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
+
+* {
+  font-family: 'Comfortaa', cursive;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  scroll-padding-top: 150px;
+}
+
+.app {
+  &__wrapper {
+    width: 65vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 120px auto;
+  }
+
+  &__header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 0;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+  }
+
+  &__header-title,
+  &__header-subtitle {
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  &__header-link {
+    text-decoration: none;
+    border-bottom: 2px solid red;
+    color: black;
+
+    &:visited {
+      color: mediumpurple;
+    }
+
+    &:hover {
+      color: teal
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    gap: 28px;
+  }
+
+  &__navigation-link {
+    text-decoration: none;
+    color: black;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: -3px;
+      display: block;
+      width: 0;
+      height: 2px;
+      background-color: red;
+      transition: width 0.5s;
+    }
+    &:hover:after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: red;
+      transition: width 0.5s;
+    }
+  }
+}
+
+.list {
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+}
+
+.list-item {
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    border-bottom: 2px solid red;
+    width: fit-content;
+    margin-bottom: 24px;
+    scroll-padding-top: 100px;
+  }
+
+  &__text {
+    margin-bottom: 24px;
+  }
+
+  &__name {
+    font-weight: 700;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &_row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__links,
+  &__custom-links {
+    display: flex;
+    gap: 12px;
+  }
+}

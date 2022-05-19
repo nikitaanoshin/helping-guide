@@ -1,4 +1,4 @@
-# checklist-vue
+# helping-guide
 
 ## Project setup
 ```
